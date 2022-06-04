@@ -1,0 +1,17 @@
+{
+  "name": "node js-crud app",
+  "version": "1.0.0",
+  "description": "Basic CRUD application with nodejs mongodb expressjs",
+  "main": "server.js",
+  "scripts": {
+    "prod": "node server",
+    "watch":"nodemon server --ignore public/",
+    "start": "npm run watch"
+  },
+  "author": "Sahil",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}
