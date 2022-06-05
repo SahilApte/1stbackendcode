@@ -1,25 +1,7 @@
 const express = require('express');
 const app = express();
-const mongoose=require("mongoose");
 
-const PostsSchema = new mongoose.Schema({
-    title:{
-        type: String
-    },
-    author:{
-        type: String
-    },
-    desc:{
-        type: String
-    }
-});
-let Posts = mongoose.model('posts',PostsSchema);
-app.get('/',(req,res) => {
-    res.send('Server Running');
-});
+const routers = require('./Routes/PostsRoutes');
 
-app.get('/getPosts',async(req,res) => {
-    const posts = await Posts.find();
-    res.json(posts);
-})
+app.use('/',routes);
 module.exports=app;
